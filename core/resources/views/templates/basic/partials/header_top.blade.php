@@ -32,7 +32,7 @@
                                 <a href="{{ route('user.login') }}" class="top-menu-list__link"> @lang('Login') </a>
                             </li> --}}
                             <li class="top-menu-list__item">
-                                <button class="btn btn-primary top-menu-list__link" onclick="register()">Login with MetaMask</button>
+                                <button class="btn btn-primary top-menu-list__link" onclick="register()">Connect Wallet</button>
                             </li>
                         </ul>
                     @endguest
