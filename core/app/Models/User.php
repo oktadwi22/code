@@ -13,6 +13,51 @@ class User extends Authenticatable
 {
     use HasApiTokens, Searchable, UserNotify;
 
+    protected $fillable = [
+        'firstname',
+        'lastname',
+        'username',
+        'email',
+        'country_code',
+        'mobile',
+        'ref_by',
+        'balance',
+        'password',
+        'address',
+        'total_review',
+        'avg_rating',
+        'total_follower',
+        'total_following',
+        'total_sold',
+        'total_sold_amount',
+        'status',
+        'kyc_data',
+        'kv',
+        'ev',
+        'sv',
+        'profile_complete',
+        'ver_code',
+        'ver_code_send_at',
+        'ts',
+        'tv',
+        'tsc',
+        'ban_reason',
+        'remember_token',
+        'created_at',
+        'updated_at',
+        'thumbnail',
+        'is_author',
+        'author_info',
+        'avatar',
+        'cover_img',
+        'bio',
+        'show_country',
+        'login_by',
+        'email_settings',
+        'social_media_settings',
+    ];
+
+
     /**
      * The attributes that should be hidden for arrays.
      *

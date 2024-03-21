@@ -25,11 +25,14 @@
                 <div class="flex-align gap-2">
                     @guest
                     <ul class="top-menu-list flex-between">
-                            <li class="top-menu-list__item">
+                            {{-- <li class="top-menu-list__item">
                                 <a href="{{ route('user.register') }}" class="top-menu-list__link"> @lang('Register') </a>
                             </li>
                             <li class="top-menu-list__item">
                                 <a href="{{ route('user.login') }}" class="top-menu-list__link"> @lang('Login') </a>
+                            </li> --}}
+                            <li class="top-menu-list__item">
+                                <button class="btn btn-primary top-menu-list__link" onclick="register()">Login with MetaMask</button>
                             </li>
                         </ul>
                     @endguest
