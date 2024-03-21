@@ -52,3 +52,24 @@ Route::controller('SiteController')->group(function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('collections/{id}/add-to-cart', 'CartController@collectionToCart')->name('collections.cart');
 });
+
+Route::middleware('web')->as('web3')->prefix('_web3')->group(function () {
+    $routes = config('web3.routes', ['signature', 'link', 'login']);
+
+    if (in_array('signature', $routes)) {
+        Route::get('signature', 'Web3LoginController@signature')->name('.signature');
+    }
+
+    if (in_array('link', $routes)) {
+        Route::post('link', 'Web3LoginController@link')->middleware('auth')->name('.link');
+    }
+
+    if (in_array('login', $routes)) {
+        Route::post('login', 'Web3LoginController@login')->middleware('guest')->name('.login');
+    }
+
+    if (in_array('register', $routes)) {
+        Route::post('register', 'Web3LoginController@register')->name('.register');
+    }
+});
+
