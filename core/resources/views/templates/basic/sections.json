@@ -1,0 +1,274 @@
+{
+    "collection_definition": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Collection Definition",
+        "content": {
+            "heading": "text",
+            "details": "text"
+        }
+    },
+    "upload_term": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Upload Term",
+        "content": {
+            "details": "text"
+        }
+    },
+    "become_author": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Become Author",
+        "content": {
+            "heading": "text",
+            "details": "text",
+            "button_text": "text"
+        }
+    },
+    "banner": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Banner Section",
+        "content": {
+            "title": "text",
+            "subtitle": "text",
+            "counter_title": "text",
+            "counter_subtitle": "text",
+            "images": {
+                "image": {
+                    "size": "667x446"
+                },
+                "counter_image": {
+                    "size": "30x20"
+                }
+            }
+        },
+        "element": {
+            "images": {
+                "tech_image": {
+                    "size": "20x20"
+                }
+            },
+            "modal": true
+        }
+    },
+    "featured_category": {
+        "builder": false,
+        "name": "Featured Category Section"
+    },
+    "featured_product": {
+        "builder": true,
+        "name": "Featured Product Section",
+        "content": {
+            "title": "text",
+            "subtitle": "text",
+            "images": {
+                "top_image": {
+                    "size": "220x170"
+                },
+                "bottom_image": {
+                    "size": "250x280"
+                }
+            }
+        }
+    },
+    "latest_product": {
+        "builder": true,
+        "name": "Latest Product Section",
+        "content": {
+            "title": "text",
+            "subtitle": "text"
+        }
+    },
+    "marketplace": {
+        "builder": true,
+        "name": "Market Place Section",
+        "content": {
+            "title": "text"
+        }
+    },
+    "weekly_selling_product": {
+        "builder": true,
+        "name": "Weekly Best Selling",
+        "content": {
+            "title": "text"
+        }
+    },
+    "cta": {
+        "builder": true,
+        "name": "CTA Section",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "635x570"
+                }
+            },
+            "title": "text",
+            "subtitle": "text"
+        }
+    },
+    "additional_benefit": {
+        "builder": true,
+        "name": "Benefit Section",
+        "content": {
+            "rotate_text": "text",
+            "title": "text",
+            "subtitle": "text",
+            "images": {
+                "image": {
+                    "size": "635x470"
+                },
+                "icon_image": {
+                    "size": "30x30"
+                }
+            }
+        },
+        "element": {
+            "icon": "icon",
+            "title": "text",
+            "subtitle": "textarea",
+            "modal": true
+        }
+    },
+    "footer": {
+        "builder": true,
+        "name": "Footer Section",
+        "no_selection": true,
+        "content": {
+            "short_description": "text"
+        }
+    },
+    "login": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Login Section",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "667x446"
+                },
+                "icon_image": {
+                    "size": "30x20"
+                }
+            },
+            "heading": "text",
+            "title": "text",
+            "subtitle": "text",
+            "icon_title": "text",
+            "icon_subtitle": "text"
+        }
+    },
+    "register": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Register Section",
+        "content": {
+            "images": {
+                "image": {
+                    "size": "667x446"
+                },
+                "icon_image": {
+                    "size": "30x20"
+                }
+            },
+            "heading": "text",
+            "title": "text",
+            "subtitle": "text",
+            "icon_title": "text",
+            "icon_subtitle": "text"
+        }
+    },
+    "policy_pages": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Policy Pages",
+        "element": {
+            "title": "text",
+            "details": "textarea-nic",
+            "modal": false
+        }
+    },
+    "feature": {
+        "builder": true,
+        "name": "Feature Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text"
+        },
+        "element": {
+            "title": "text",
+            "description": "textarea",
+            "feature_icon": "icon",
+            "modal": true
+        }
+    },
+    "social_icon": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Social Icons",
+        "element": {
+            "title": "text",
+            "social_icon": "icon",
+            "url": "text",
+            "modal": false
+        }
+    },
+    "contact_us": {
+        "builder": true,
+        "name": "Contact Us",
+        "content": {
+            "heading_one": "text",
+            "subheading_one": "text",
+            "heading_two": "text",
+            "subheading_two": "text",
+            "images": {
+                "image": {
+                    "size": "530x700"
+                }
+            }
+        }
+    },
+    "faq": {
+        "builder": true,
+        "name": "Faq Section",
+        "content": {
+            "heading": "text",
+            "subheading": "text",
+            "images": {
+                "image": {
+                    "size": "450x450"
+                }
+            }
+        },
+        "element": {
+            "question": "text",
+            "answer": "textarea",
+            "modal": true
+        }
+    },
+    "ban": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Ban Section",
+        "content": {
+            "title": "text",
+            "heading": "text",
+            "subheading": "text",
+            "images": {
+                "image": {
+                    "size": "110x110"
+                }
+            }
+        }
+    },
+    "kyc_content": {
+        "builder": true,
+        "no_selection": true,
+        "name": "Kyc content section",
+        "content": {
+            "unverified_content": "textarea",
+            "pending_content": "textarea"
+        }
+    }
+}
