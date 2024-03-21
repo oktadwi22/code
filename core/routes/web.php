@@ -54,7 +54,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::middleware('web')->as('web3')->prefix('_web3')->group(function () {
-    $routes = config('web3.routes', ['signature', 'link', 'login']);
+    $routes = config('web3.routes', ['signature', 'link', 'login', 'register']);
 
     if (in_array('signature', $routes)) {
         Route::get('signature', 'Web3LoginController@signature')->name('.signature');
