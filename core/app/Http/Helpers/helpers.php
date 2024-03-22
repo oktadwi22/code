@@ -17,7 +17,7 @@ use Illuminate\Support\Str;
 
 function systemDetails()
 {
-    $system['name']          = 'codeplus';
+    $system['name']          = 'SourceBlock';
     $system['version']       = '1.0';
     $system['build_version'] = '4.4.10';
     return $system;
