@@ -1,0 +1,8 @@
+
+.DS_Store
+core/composer.lock
+/core/storage
+/core/vendor
+/core/vendor
+error_log
+/core/node_modules
