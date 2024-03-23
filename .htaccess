@@ -2,25 +2,27 @@
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
-
     RewriteEngine On
-
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
-
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
-
     <Files .env>
         Order allow,deny
         Deny from all
     </Files>
 </IfModule>
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/sourvkry/public_html/core"
+PassengerBaseURI "/"
+PassengerNodejs "/home/sourvkry/nodevenv/public_html/core/14/bin/node"
+PassengerAppType node
+PassengerStartupFile webpack.mix.js
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
