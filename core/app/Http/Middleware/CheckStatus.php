@@ -17,12 +17,12 @@ class CheckStatus
     public function handle($request, Closure $next)
     {
         if (Auth::check()) {
-            $user = auth()->user();
-            if ($user->status  && $user->ev  && $user->sv  && $user->tv) {
-                return $next($request);
-            } else {
-                return to_route('user.authorization');
-            }
+            // $user = auth()->user();
+            // if ($user->status  && $user->ev  && $user->sv  && $user->tv) {
+            return $next($request);
+            // } else {
+            //     return to_route('user.authorization');
+            // }
         }
         abort(403);
     }
