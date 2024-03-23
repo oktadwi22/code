@@ -61,7 +61,8 @@
     @stack('script-lib')
 
     <script src="{{ asset($activeTemplateTrue . 'js/main.js') }}"></script>
-    <script src="{{ asset('assets/global/js/register.js') }}"></script>
+    <!-- <script src="{{ asset('assets/global/js/register.js') }}"></script> -->
+    <script src="/public/js/register.js"></script>
 
     @include('partials.plugins')
     @include('partials.notify')

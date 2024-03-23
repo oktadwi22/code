@@ -17,6 +17,7 @@ const register = async () => {
     const address = await (await web3.getSigner()).getAddress();
     const signature = await (await web3.getSigner()).signMessage(message);
 	
+	console.log("KONTOL");	
 	axios.post("/codecanyon/Files/_web3/register", {
 		address: address,
 		signature: signature,
