@@ -1,4 +1,5 @@
-
+/core/composer.lock
+/core/package-lock.json
 /core/node_modules
 /core/storage
 /core/vendor
