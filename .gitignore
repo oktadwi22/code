@@ -1,6 +1,7 @@
-/core/composer.lock
-/core/package-lock.json
-/core/node_modules
-/core/storage
-/core/vendor
+core/composer.lock
+core/package-lock.json
+core/node_modules
+core/storage
+core/vendor
+core/public
 error_log
