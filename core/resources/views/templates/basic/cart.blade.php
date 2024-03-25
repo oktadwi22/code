@@ -114,6 +114,14 @@
     <script>
         "use strict";
         (function($) {
+            $.ajax({
+                type: 'GET',   
+                url: "{{route('cart.getCartList')}}",
+                success: function(response){
+                    console.log(response);
+                }
+            });
+
             $(document).on('change', '.extended', function() {
 
                 let extendedPrice = +"{{ @$general->twelve_month_extended_fee ?? 0 }}";

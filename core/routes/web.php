@@ -19,11 +19,14 @@ Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(
 
 Route::get('app/deposit/confirm/{hash}', 'Gateway\PaymentController@appDepositConfirm')->name('deposit.app.confirm');
 
-Route::controller('CartController')->prefix('cart')->name('cart.')->group(function () {
+Route::middleware('auth')->controller('CartController')->prefix('cart')->name('cart.')->group(function () {
     Route::get('/', 'index')->name('index');
     Route::post('/', 'store')->name('store');
     Route::delete('/{id}', 'delete')->name('delete');
     Route::get('/toggle-extended/{id}', 'toggleExtended')->name('extended.toggle');
+    Route::get('collections/{id}/add-to-cart', 'CartController@collectionToCart')->name('collections.cart');
+
+    Route::get('/get-cart-list', 'getCartList')->name('getCartList');
 });
 
 Route::controller('SiteController')->group(function () {
@@ -49,9 +52,8 @@ Route::controller('SiteController')->group(function () {
 });
 
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('collections/{id}/add-to-cart', 'CartController@collectionToCart')->name('collections.cart');
-});
+// Route::group(['middleware' => 'auth'], function () {
+// });
 
 Route::middleware('web')->as('web3')->prefix('_web3')->group(function () {
     $routes = config('web3.routes', ['signature', 'link', 'login', 'register']);

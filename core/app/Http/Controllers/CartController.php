@@ -25,6 +25,20 @@ class CartController extends Controller
         return view($this->activeTemplate . 'cart', compact('pageTitle', 'cartItems'));
     }
 
+    public function getCartList()
+    {
+        $sessionId = request()->session()->getId();
+        $cartItems = [];
+
+        if (auth() && auth()->check()) {
+            $cartItems = Cart::where('user_id', auth()->id())->with('product','product.author')->get();
+        } else {
+            $cartItems = Cart::where('session_id', $sessionId)->with('product','product.author')->get();
+        }
+
+        return response()->json($cartItems);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
