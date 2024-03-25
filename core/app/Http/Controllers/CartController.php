@@ -17,9 +17,9 @@ class CartController extends Controller
         $cartItems = [];
 
         if (auth() && auth()->check()) {
-            $cartItems = Cart::where('user_id', auth()->id())->with('product')->get();
+            $cartItems = Cart::where('user_id', auth()->id())->with('product','product.author')->get();
         } else {
-            $cartItems = Cart::where('session_id', $sessionId)->with('product')->get();
+            $cartItems = Cart::where('session_id', $sessionId)->with('product','product.author')->get();
         }
 
         return view($this->activeTemplate . 'cart', compact('pageTitle', 'cartItems'));

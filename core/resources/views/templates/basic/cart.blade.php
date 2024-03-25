@@ -25,15 +25,17 @@
                                             <span class="shopping-cart__category">
                                                 @lang('Category') : <a href="{{ route('products', ['category' => $cartItem->product->category_id]) }}">
                                                     {{ @$cartItem->category }}</a>
+                                                <br>
+                                                Seller: {{$cartItem->product->author->username}}
                                             </span>
-                                            <div class="form--check form--check--sm">
+                                            {{-- <div class="form--check form--check--sm">
                                                 <input class="form-check-input extended" type="checkbox"
                                                     id="extend-{{ $cartItem->id }}" data-id="{{ $cartItem->id }}"
                                                     @checked($cartItem->is_extended)>
                                                 <label class="form-check-label" for="extend-{{ $cartItem->id }}">
                                                     @lang('Extend support to 12 months').+{{ $general->cur_sym }}{{ showAmount($general->twelve_month_extended_fee) }}
                                                 </label>
-                                            </div>
+                                            </div> --}}
                                             <div class="cart-action">
                                                 <button type="button" class="cart-action__item text--danger deleteCartItem"
                                                     data-question="@lang('Are you sure to remove this item ? ')"
