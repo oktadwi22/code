@@ -57,10 +57,10 @@
                                                         data-product_id="{{ $purchasedItem->product_id }}">
                                                         <i class="la la-star"></i> @lang('Review')
                                                     </button>
-                                                    <button class="btn btn-outline--warning btn--sm refund-btn"
+                                                    {{-- <button class="btn btn-outline--warning btn--sm refund-btn"
                                                         data-purchase_code="{{ $purchasedItem->purchase_code }}">
                                                         <i class="la la-rotate-left"></i> @lang('Refund')
-                                                    </button>
+                                                    </button> --}}
                                                 </div>
                                             </td>
                                         </tr>
@@ -198,14 +198,14 @@
                 modal.find('form')[0].reset();
             });
 
-            $('.refund-btn').on('click', function(e) {
-                const modal = $('#refundRequestModal');
-                const purchaseCode = $(this).data('purchase_code');
-                modal.modal('show');
-                let url = "{{ route('user.author.refund.request', ':purchase_code') }}";
-                url = url.replace(':purchase_code', purchaseCode);
-                modal.find('.refund-form').attr('action', url);
-            });
+            // $('.refund-btn').on('click', function(e) {
+            //     const modal = $('#refundRequestModal');
+            //     const purchaseCode = $(this).data('purchase_code');
+            //     modal.modal('show');
+            //     let url = "{{ route('user.author.refund.request', ':purchase_code') }}";
+            //     url = url.replace(':purchase_code', purchaseCode);
+            //     modal.find('.refund-form').attr('action', url);
+            // });
         })(jQuery);
     </script>
 @endpush
