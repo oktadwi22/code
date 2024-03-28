@@ -25,10 +25,10 @@
                     </form>
                 @endif
                 @if (@$author->is_author)
-                <div class="rating-list">
-                    @php echo displayRating($author->avg_rating ?? 0) @endphp
-                    <span class="rating-list__rating">{{ getAmount($author->reviews ? $author->reviews->count() : 0) }}</span>
-                </div>
+                <!--<div class="rating-list">-->
+                <!--    @php echo displayRating($author->avg_rating ?? 0) @endphp-->
+                <!--    <span class="rating-list__rating">{{ getAmount($author->reviews ? $author->reviews->count() : 0) }}</span>-->
+                <!--</div>-->
                 @endif
 
             </div>

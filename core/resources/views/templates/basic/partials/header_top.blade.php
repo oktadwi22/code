@@ -46,13 +46,13 @@
                         <div class="profile-info">
                             <div id="connect-wallet" class="profile-info__button flex-align"></div>
                             <script src="{{ asset('assets/connect/wrapper.js') }}"></script>
-                            <button type="button" class="profile-info__button flex-align">
-                                <span class="profile-info__icon"><i class="icon-userrr"></i></span>
-                                <span class="profile-info__content">
-                                    <span class="profile-info__name">{{ @$user->username }} </span>
-                                    <span class="profile-info__text">{{ gs()->cur_sym }}{{ showAmount($user->balance) }}</span>
-                                </span>
-                            </button>
+                            <!--<button type="button" class="profile-info__button flex-align">-->
+                            <!--    <span class="profile-info__icon"><i class="icon-userrr"></i></span>-->
+                            <!--    <span class="profile-info__content">-->
+                            <!--        <span class="profile-info__name">{{ @$user->username }} </span>-->
+                            <!--        <span class="profile-info__text">{{ gs()->cur_sym }}{{ showAmount($user->balance) }}</span>-->
+                            <!--    </span>-->
+                            <!--</button>-->
                             <div class="profile-dropdown">
                                 <!--<div class="profile-info style-two flex-align">-->
                                 <!--    <span class="profile-info__icon"><i class="icon-userrr"></i></span>-->
@@ -69,14 +69,14 @@
                                             @lang('Dashboard')
                                         </a>
                                     </li>
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('user.profile.my') }}" class="profile-dropdown-list__link {{menuActive('user.profile.my')}}">
-                                            <span class="icon">
-                                                <i class="la la-user"></i>
-                                            </span>
-                                            @lang('Profile')
-                                        </a>
-                                    </li>
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('user.profile.my') }}" class="profile-dropdown-list__link {{menuActive('user.profile.my')}}">-->
+                                    <!--        <span class="icon">-->
+                                    <!--            <i class="la la-user"></i>-->
+                                    <!--        </span>-->
+                                    <!--        @lang('Profile')-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
                                     <li class="profile-dropdown-list__item">
                                         <a href="{{ route('user.author.download') }}" class="profile-dropdown-list__link {{menuActive('user.author.download')}} ">
                                             <span class="icon"> <i class="la la-download"></i></span>@lang('Purchased Item')</a>
@@ -93,12 +93,12 @@
                                             <span class="icon"> <i class="la la-upload"></i></span> @lang('Upload Item')</a>
                                     </li>
                                     @endif
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('user.withdraw.history') }}" class="profile-dropdown-list__link {{menuActive('user.withdraw.*')}}">
-                                            <span class="icon"><i class="la la-bank"></i></span>
-                                            @lang('Withdraw History')
-                                        </a>
-                                    </li>
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('user.withdraw.history') }}" class="profile-dropdown-list__link {{menuActive('user.withdraw.*')}}">-->
+                                    <!--        <span class="icon"><i class="la la-bank"></i></span>-->
+                                    <!--        @lang('Withdraw History')-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
                                     <li class="profile-dropdown-list__item">
                                         <a href="{{ route('user.transactions') }}" class="profile-dropdown-list__link {{menuActive('user.transactions')}}">
                                             <span class="icon"><i class="la la-exchange-alt"></i></span>
@@ -122,22 +122,22 @@
                                             <span class="icon"><i class="la la-copy"></i></span>@lang('Collections')
                                         </a>
                                     </li>
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('user.profile.setting') }}" class="profile-dropdown-list__link {{menuActive('user.profile.setting')}}">
-                                            <span class="icon"> <i class="la la-gear"></i></span> @lang('Settings')</a>
-                                    </li>
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('user.twofactor') }}" class="profile-dropdown-list__link {{menuActive('user.twofactor')}}">
-                                            <span class="icon"> <i class="la la-fingerprint"></i></span> @lang('2FA Security')</a>
-                                    </li>
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('user.change.password') }}" class="profile-dropdown-list__link {{menuActive('user.change.password')}}">
-                                            <span class="icon"> <i class="la la-key"></i></span> @lang('Change Password')</a>
-                                    </li>
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('user.logout') }}" class="profile-dropdown-list__link">
-                                            <span class="icon"> <i class="la la-sign-out-alt"></i></span> @lang('Logout')</a>
-                                    </li>
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('user.profile.setting') }}" class="profile-dropdown-list__link {{menuActive('user.profile.setting')}}">-->
+                                    <!--        <span class="icon"> <i class="la la-gear"></i></span> @lang('Settings')</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('user.twofactor') }}" class="profile-dropdown-list__link {{menuActive('user.twofactor')}}">-->
+                                    <!--        <span class="icon"> <i class="la la-fingerprint"></i></span> @lang('2FA Security')</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('user.change.password') }}" class="profile-dropdown-list__link {{menuActive('user.change.password')}}">-->
+                                    <!--        <span class="icon"> <i class="la la-key"></i></span> @lang('Change Password')</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('user.logout') }}" class="profile-dropdown-list__link">-->
+                                    <!--        <span class="icon"> <i class="la la-sign-out-alt"></i></span> @lang('Logout')</a>-->
+                                    <!--</li>-->
                                 </ul>
                             </div>
                         </div>

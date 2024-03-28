@@ -52,11 +52,11 @@
                                                         class="btn btn-outline--base btn--sm">
                                                         <i class="la la-download"></i> @lang('Download')
                                                     </a>
-                                                    <button class="btn btn-outline--success btn--sm review_button"
-                                                        data-purchase-code="{{ $purchasedItem->purchase_code }}"
-                                                        data-product_id="{{ $purchasedItem->product_id }}">
-                                                        <i class="la la-star"></i> @lang('Review')
-                                                    </button>
+                                                    <!--<button class="btn btn-outline--success btn--sm review_button"-->
+                                                    <!--    data-purchase-code="{{ $purchasedItem->purchase_code }}"-->
+                                                    <!--    data-product_id="{{ $purchasedItem->product_id }}">-->
+                                                    <!--    <i class="la la-star"></i> @lang('Review')-->
+                                                    <!--</button>-->
                                                     {{-- <button class="btn btn-outline--warning btn--sm refund-btn"
                                                         data-purchase_code="{{ $purchasedItem->purchase_code }}">
                                                         <i class="la la-rotate-left"></i> @lang('Refund')
@@ -184,15 +184,15 @@
 
             let modal = $('#reviewModal');
 
-            $('.review_button').on('click', function() {
-                let data = $(this).data();
-                let purchaseCode = data.purchaseCode;
-                let route = `{{ route('user.author.review.store', ':id') }}`;
-                route = route.replace(':id', data.product_id);
-                modal.find('form').attr('action', route);
-                modal.find('form').find('[name="purchase_code"]').val(purchaseCode);
-                modal.modal('show');
-            });
+            // $('.review_button').on('click', function() {
+            //     let data = $(this).data();
+            //     let purchaseCode = data.purchaseCode;
+            //     let route = `{{ route('user.author.review.store', ':id') }}`;
+            //     route = route.replace(':id', data.product_id);
+            //     modal.find('form').attr('action', route);
+            //     modal.find('form').find('[name="purchase_code"]').val(purchaseCode);
+            //     modal.modal('show');
+            // });
 
             modal.on('hidden.bs.modal', function() {
                 modal.find('form')[0].reset();

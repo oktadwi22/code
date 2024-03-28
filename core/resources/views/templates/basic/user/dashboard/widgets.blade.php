@@ -9,18 +9,18 @@
     @php
         $currentLevel = $user->currentAuthorLevel->first();
     @endphp
-    <div class="{{ $bsColClass }} col-sm-6">
-        <div class="dashboard-widget">
-            <span class="dashboard-widget__icon--big"><i class="la la-database"></i></span>
-            <h6 class="dashboard-widget__title">@lang('Author Level')</h6>
-            <div class="dashboard-widget__content">
-                <span class="dashboard-widget__icon"><i class="la la-database"></i></span>
-                <div class="dashboard-widget__info">
-                    <h5 class="dashboard-widget__amount"> {{ __(@$currentLevel->name ?? 'N/A')}}  </h5>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div class="{{ $bsColClass }} col-sm-6">-->
+    <!--    <div class="dashboard-widget">-->
+    <!--        <span class="dashboard-widget__icon--big"><i class="la la-database"></i></span>-->
+    <!--        <h6 class="dashboard-widget__title">@lang('Author Level')</h6>-->
+    <!--        <div class="dashboard-widget__content">-->
+    <!--            <span class="dashboard-widget__icon"><i class="la la-database"></i></span>-->
+    <!--            <div class="dashboard-widget__info">-->
+    <!--                <h5 class="dashboard-widget__amount"> {{ __(@$currentLevel->name ?? 'N/A')}}  </h5>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
     @else
 
     <div class="{{ $bsColClass }} col-sm-6">
@@ -64,18 +64,18 @@
             </div>
         </div>
     </div>
-    <div class="{{ $bsColClass }} col-sm-6">
-        <div class="dashboard-widget">
-            <span class="dashboard-widget__icon--big"><i class="la la-bank"></i></span>
-            <h6 class="dashboard-widget__title">@lang('Withdrawals')</h6>
-            <div class="dashboard-widget__content">
-                <span class="dashboard-widget__icon"><i class="la la-bank"></i></span>
-                <div class="dashboard-widget__info">
-                    <h5 class="dashboard-widget__amount">{{ $general->cur_sym }}{{ showAmount($totalWithdrawals) }}
-                    </h5>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div class="{{ $bsColClass }} col-sm-6">-->
+    <!--    <div class="dashboard-widget">-->
+    <!--        <span class="dashboard-widget__icon--big"><i class="la la-bank"></i></span>-->
+    <!--        <h6 class="dashboard-widget__title">@lang('Withdrawals')</h6>-->
+    <!--        <div class="dashboard-widget__content">-->
+    <!--            <span class="dashboard-widget__icon"><i class="la la-bank"></i></span>-->
+    <!--            <div class="dashboard-widget__info">-->
+    <!--                <h5 class="dashboard-widget__amount">{{ $general->cur_sym }}{{ showAmount($totalWithdrawals) }}-->
+    <!--                </h5>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
 
 </div>
