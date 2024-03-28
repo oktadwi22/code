@@ -46,21 +46,21 @@
                         <div class="profile-info">
                             <div id="connect-wallet" class="profile-info__button flex-align"></div>
                             <script src="{{ asset('assets/connect/wrapper.js') }}"></script>
-                            <!--<button type="button" class="profile-info__button flex-align">-->
-                            <!--    <span class="profile-info__icon"><i class="icon-userrr"></i></span>-->
-                            <!--    <span class="profile-info__content">-->
-                            <!--        <span class="profile-info__name">{{ @$user->username }} </span>-->
-                            <!--        <span class="profile-info__text">{{ gs()->cur_sym }}{{ showAmount($user->balance) }}</span>-->
-                            <!--    </span>-->
-                            <!--</button>-->
+                            <button type="button" class="profile-info__button flex-align">
+                                <span class="profile-info__icon"><i class="icon-userrr"></i></span>
+                                <span class="profile-info__content">
+                                    <span class="profile-info__name">{{ @$user->username }} </span>
+                                    <span class="profile-info__text">{{ gs()->cur_sym }}{{ showAmount($user->balance) }}</span>
+                                </span>
+                            </button>
                             <div class="profile-dropdown">
-                                <div class="profile-info style-two flex-align">
-                                    <span class="profile-info__icon"><i class="icon-userrr"></i></span>
-                                    <span class="profile-info__content">
-                                        <span class="profile-info__name">{{ @$user->fullname }} </span>
-                                        <span class="profile-info__text">{{ @$user->email }}</span>
-                                    </span>
-                                </div>
+                                <!--<div class="profile-info style-two flex-align">-->
+                                <!--    <span class="profile-info__icon"><i class="icon-userrr"></i></span>-->
+                                <!--    <span class="profile-info__content">-->
+                                <!--        <span class="profile-info__name">{{ @$user->fullname }} </span>-->
+                                <!--        <span class="profile-info__text">{{ @$user->email }}</span>-->
+                                <!--    </span>-->
+                                <!--</div>-->
 
                                 <ul class="profile-dropdown-list">
                                     <li class="profile-dropdown-list__item">
