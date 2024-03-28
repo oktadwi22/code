@@ -72,6 +72,11 @@
                                     @lang('Contact')
                                 </a>
                             </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="/">
+                                    Company Certificate
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
