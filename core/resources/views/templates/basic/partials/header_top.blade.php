@@ -54,13 +54,13 @@
                             <!--    </span>-->
                             <!--</button>-->
                             <div class="profile-dropdown">
-                                <!--<div class="profile-info style-two flex-align">-->
-                                <!--    <span class="profile-info__icon"><i class="icon-userrr"></i></span>-->
-                                <!--    <span class="profile-info__content">-->
-                                <!--        <span class="profile-info__name">{{ @$user->fullname }} </span>-->
-                                <!--        <span class="profile-info__text">{{ @$user->email }}</span>-->
-                                <!--    </span>-->
-                                <!--</div>-->
+                                <div class="profile-info style-two flex-align">
+                                    <span class="profile-info__icon"><i class="icon-userrr"></i></span>
+                                    <span class="profile-info__content">
+                                        <span class="profile-info__name">{{ @$user->fullname }} </span>
+                                        <span class="profile-info__text">{{ @$user->email }}</span>
+                                    </span>
+                                </div>
 
                                 <ul class="profile-dropdown-list">
                                     <li class="profile-dropdown-list__item">
