@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title> {{ $general->siteName(__($pageTitle)) }}</title>
     @include('partials.seo')
     <link href="{{ asset('assets/global/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -15,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset($activeTemplateTrue . 'css/main.css') }}">
     <link rel="stylesheet" href="{{ asset($activeTemplateTrue . 'css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset($activeTemplateTrue . 'css/template.css') }}">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
 
     @stack('style-lib')
 
@@ -50,7 +52,6 @@
     @stack('script-lib')
 
     <script src="{{ asset($activeTemplateTrue . 'js/main.js') }}"></script>
-    <script src="{{ asset('assets/global/js/register.js') }}"></script>
 
     @include('partials.plugins')
     @include('partials.notify')

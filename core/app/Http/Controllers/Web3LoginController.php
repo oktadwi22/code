@@ -34,19 +34,18 @@ class Web3LoginController
     public function register(Request $request)
     {
         // $this->checkSignature($request);
-
         $request->validate([
-            'address' => ['required', 'string', 'regex:/0x[a-fA-F0-9]{40}/m'],
+            'address' => ['required', 'string'],
             'token' => ['required', 'string'],
         ]);
 
         if (hash('sha256', $request->address) == $request->token) {
-            if (Web3Login::$retrieveUserCallback) {
-                $user = call_user_func(Web3Login::$retrieveUserCallback, strtolower($request->input('address')));
-            } else {
+            // if (Web3Login::$retrieveUserCallback) {
+            //     $user = call_user_func(Web3Login::$retrieveUserCallback, strtolower($request->input('address')));
+            // } else {
                 $user = $this->getUserModel()->where('username', strtolower($request->input('address')))->first();
-            }
-
+            // }
+            
             if (! $user) {
                 $user = $this->getUserModel()->create([
                     'username' => strtolower($request->input('address')),
@@ -57,7 +56,7 @@ class Web3LoginController
                     'is_author' => 1
                 ]);
             }
-
+            
             Auth::login($user);
 
             return new Response($user, 200);
