@@ -160,7 +160,7 @@
     // =============== Password Show Hide Js End =================
 
     // ========================== Profile Dropdown Js Start ====================
-    $(".profile-info__button").on("click", function (event) {
+    $(".profile-info__button button:first-child").on("click", function (event) {
       event.stopPropagation();
       $(".profile-dropdown").toggleClass("show");
     });
