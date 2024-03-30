@@ -98,7 +98,7 @@ class LoginController extends Controller
         request()->session()->invalidate();
 
         $notify[] = ['success', 'You have been logged out.'];
-        return to_route('user.login')->withNotify($notify);
+        return to_route('home')->withNotify($notify);
     }
 
 
