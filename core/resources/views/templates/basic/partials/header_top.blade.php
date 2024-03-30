@@ -38,11 +38,12 @@
                             </li>
                         </ul>
                     @endguest
-                    <a href="{{ route('cart.index') }}" class="cart-button ms-0 d-block d-lg-none">
-                        <span class="cart-button__icon "><i class="icon-Add-to-Cart-Button"></i></span>
-                        <span class="cart-button__qty flex-center">{{ $cartLength }}</span>
-                    </a>
+
                     @auth
+                        <a href="{{ route('cart.index') }}" class="cart-button ms-0 d-block d-lg-none">
+                            <span class="cart-button__icon "><i class="icon-Add-to-Cart-Button"></i></span>
+                            <span class="cart-button__qty flex-center">{{ $cartLength }}</span>
+                        </a>
                         <div class="profile-info">
                             <div id="connect-wallet" class="profile-info__button flex-align"></div>
                             <script src="{{ asset('assets/connect/wrapper.js') }}"></script>

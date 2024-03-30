@@ -35,8 +35,15 @@ class CartController extends Controller
         } else {
             $cartItems = Cart::where('session_id', $sessionId)->with('product','product.author')->get();
         }
+        
+        $filteredCart = ['buyer'=>[],'seller'=>[],'amount'=>[]];
+        foreach($cartItems as $item){
+            array_push($filteredCart['buyer'],auth()->user()->username);
+            array_push($filteredCart['seller'],$item->product->author->username);
+            array_push($filteredCart['amount'],$item->price+$item->extended_amount+$item->buyer_fee);
+        }
 
-        return response()->json($cartItems);
+        return response()->json($filteredCart);
     }
 
     public function store(Request $request)

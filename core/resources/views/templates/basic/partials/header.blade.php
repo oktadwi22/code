@@ -46,10 +46,12 @@
                     @endforeach
                 </ul>
                 
-                <a href="{{ route('cart.index') }}" class="cart-button ms-0 d-none d-lg-block">
-                        <span class="cart-button__icon "><i class="icon-Add-to-Cart-Button"></i></span>
-                        <span class="cart-button__qty flex-center">{{ $cartLength }}</span>
-                </a>
+                @auth
+                    <a href="{{ route('cart.index') }}" class="cart-button ms-0 d-none d-lg-block">
+                            <span class="cart-button__icon "><i class="icon-Add-to-Cart-Button"></i></span>
+                            <span class="cart-button__qty flex-center">{{ $cartLength }}</span>
+                    </a>
+                @endauth
             </div>
         </nav>
     </div>
