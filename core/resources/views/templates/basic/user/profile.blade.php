@@ -21,32 +21,32 @@
                     </div>
                 </div>
 
-                @if ($collections->count() > 0)
-                    <div>
-                        <h4 class="mt-3">@lang('Public Collections')</h4>
-                        <div class="row">
-                            @foreach ($collections as $collection)
-                                <div class="col-md-4">
-                                    <div>
-                                        <a href="{{ route('user.collections.details', ['username' => $author->username, 'id' => $collection->id]) }}"
-                                            class="link">
-                                            @php
-                                            $image = $collection->image ? getImage(getFilePath('productCollection') . '/' . $collection->image) : getImage(getFilePath('productCollection') . '/default.png'); @endphp
-                                            <img src="{{ $image }}" alt="@lang('Collection Image')">
-                                        </a>
-                                        <h6 class="text-center mt-2">
-                                            <a
-                                                href="{{ route('user.collections.details', ['username' => $author->username, 'id' => $collection->id]) }}">
-                                                {{ __($collection->name) }}
-                                            </a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
+                <!--@if ($collections->count() > 0)-->
+                <!--    <div>-->
+                <!--        <h4 class="mt-3">@lang('Public Collections')</h4>-->
+                <!--        <div class="row">-->
+                <!--            @foreach ($collections as $collection)-->
+                <!--                <div class="col-md-4">-->
+                <!--                    <div>-->
+                <!--                        <a href="{{ route('user.collections.details', ['username' => $author->username, 'id' => $collection->id]) }}"-->
+                <!--                            class="link">-->
+                <!--                            @php-->
+                <!--                            $image = $collection->image ? getImage(getFilePath('productCollection') . '/' . $collection->image) : getImage(getFilePath('productCollection') . '/default.png'); @endphp-->
+                <!--                            <img src="{{ $image }}" alt="@lang('Collection Image')">-->
+                <!--                        </a>-->
+                <!--                        <h6 class="text-center mt-2">-->
+                <!--                            <a-->
+                <!--                                href="{{ route('user.collections.details', ['username' => $author->username, 'id' => $collection->id]) }}">-->
+                <!--                                {{ __($collection->name) }}-->
+                <!--                            </a>-->
+                <!--                        </h6>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <!--            @endforeach-->
+                <!--        </div>-->
 
-                    </div>
-                @endif
+                <!--    </div>-->
+                <!--@endif-->
             </div>
             <div class="col-lg-4 ps-xl-5">
                 <div class="common-sidebar">

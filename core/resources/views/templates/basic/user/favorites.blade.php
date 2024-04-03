@@ -44,12 +44,12 @@
                             </div>
                             <div class="collected-product-item__right">
                                 <div class="collection-list list-style d-flex mb-3">
-                                    <button data-product-id="{{ $product->id }}"
-                                        class="collection-list__button collection-btn add-collection-btn"
-                                        data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@lang('Add to Collection')"
-                                        data-product_id="{{ $product->id }}" data-product_title="{{ __($product->title) }}">
-                                        <i class="icon-Add-to-collection"></i>
-                                    </button>
+                                    <!--<button data-product-id="{{ $product->id }}"-->
+                                    <!--    class="collection-list__button collection-btn add-collection-btn"-->
+                                    <!--    data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="@lang('Add to Collection')"-->
+                                    <!--    data-product_id="{{ $product->id }}" data-product_title="{{ __($product->title) }}">-->
+                                    <!--    <i class="icon-Add-to-collection"></i>-->
+                                    <!--</button>-->
                                     <button class="collection-list__button delete-btn remove-fav-button"
                                         data-bs-toggle="tooltip" data-bs-placement="top"
                                         data-product-id="{{ $product->id }}" data-bs-title="@lang('Delete Item')">
