@@ -40,7 +40,7 @@ class CartController extends Controller
         foreach($cartItems as $item){
             array_push($filteredCart['buyer'],auth()->user()->username);
             array_push($filteredCart['seller'],$item->product->author->username);
-            array_push($filteredCart['amount'],$item->price+$item->extended_amount+$item->buyer_fee);
+            array_push($filteredCart['amount'],(string)(($item->price+$item->extended_amount+$item->buyer_fee)*1000000));
         }
 
         return response()->json($filteredCart);

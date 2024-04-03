@@ -49,17 +49,19 @@
                     @endforeach
                 </ul>
             </div>
-            <div class="common-sidebar__button">
-                <button type="submit" class="cart_submit_btn btn btn--{{ $productInCart ? 'danger' : 'base' }} w-100">
-                    <i class="fa fa-spinner d-none fa-spin"></i>
-                    <span class="text-box">
-                        <span class="icon">
-                            <i class="icon-Add-to-Cart-Button"></i>
+            @auth
+                <div class="common-sidebar__button">
+                    <button type="submit" class="cart_submit_btn btn btn--{{ $productInCart ? 'danger' : 'base' }} w-100">
+                        <i class="fa fa-spinner d-none fa-spin"></i>
+                        <span class="text-box">
+                            <span class="icon">
+                                <i class="icon-Add-to-Cart-Button"></i>
+                            </span>
+                            <span class="text">@lang($productInCart ? 'Remove from Cart' : 'Add to Cart')</span>
                         </span>
-                        <span class="text">@lang($productInCart ? 'Remove from Cart' : 'Add to Cart')</span>
-                    </span>
-                </button>
-            </div>
+                    </button>
+                </div>
+            @endauth
         </form>
     </div>
 </div>

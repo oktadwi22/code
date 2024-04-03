@@ -648,7 +648,7 @@ class AuthorController extends Controller
         $orderItem = $user->purchasedItems()->where('purchase_code', $purchaseCode)->first();
         $product   = @$orderItem->product;
 
-        abort_if(($user->id !== @$orderItem->user_id || @$orderItem->is_refunded), 404);
+        abort_if(($user->id != @$orderItem->user_id || @$orderItem->is_refunded), 404);
 
         $downloadPath = getFilePath('productFile') . '/' . $product->slug . '/' . @$product->file;
 
