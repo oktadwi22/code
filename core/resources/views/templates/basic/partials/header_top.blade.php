@@ -118,11 +118,11 @@
                                             <span class="icon"><i class="la la-heart-o"></i></span>@lang('Favorites')
                                         </a>
                                     </li>
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('user.author.collections') }}" class="profile-dropdown-list__link {{menuActive('user.author.collections')}}">
-                                            <span class="icon"><i class="la la-copy"></i></span>@lang('Collections')
-                                        </a>
-                                    </li>
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('user.author.collections') }}" class="profile-dropdown-list__link {{menuActive('user.author.collections')}}">-->
+                                    <!--        <span class="icon"><i class="la la-copy"></i></span>@lang('Collections')-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
                                     <!--<li class="profile-dropdown-list__item">-->
                                     <!--    <a href="{{ route('user.profile.setting') }}" class="profile-dropdown-list__link {{menuActive('user.profile.setting')}}">-->
                                     <!--        <span class="icon"> <i class="la la-gear"></i></span> @lang('Settings')</a>-->
