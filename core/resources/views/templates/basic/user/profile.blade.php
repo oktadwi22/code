@@ -7,13 +7,13 @@
                     @php
                         $image = @$author->cover_img ? getImage(getFilePath('authorAvatar') . '/' . @$author->cover_img) : siteFavicon();
                     @endphp
-                    @if(!@$author->cover_img)
-                        <div class="default_cover_img">
-                            <img src="{{ $image }}" class="author-avatar {{ !@$author->cover_img ? 'avatar-from-fav' : '' }}" alt="@lang('Cover Image')">
-                        </div>
-                    @else
-                        <img src="{{ $image }}" alt="@lang('Cover Image')">
-                    @endif
+                    <!--@if(!@$author->cover_img)-->
+                    <!--    <div class="default_cover_img">-->
+                    <!--        <img src="{{ $image }}" class="author-avatar {{ !@$author->cover_img ? 'avatar-from-fav' : '' }}" alt="@lang('Cover Image')">-->
+                    <!--    </div>-->
+                    <!--@else-->
+                    <!--    <img src="{{ $image }}" alt="@lang('Cover Image')">-->
+                    <!--@endif-->
                 </div>
                 <div class="profile-content-list">
                     <div class="profile-content-list__item">

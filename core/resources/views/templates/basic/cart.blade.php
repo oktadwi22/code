@@ -2,8 +2,6 @@
 @section('content')
     <section class="shopping-cart-page pt-60 pb-120">
         <div class="container">
-            <form action="{{ route('user.order.store') }}" method="POST">
-                @csrf
                 <div class="row gy-4">
                     <div class="col-lg-8">
                         <div class="shopping-cart-wrapper">
@@ -88,14 +86,13 @@
                                 <h6 class="mb-0">@lang('Total')</h6>
                                 <h6 class="mb-0 total">{{ $general->cur_sym }}{{ showAmount($subtotal) }}</h6>
                             </div>
-                            <div class="order-summary__button padding">
-                                <button type="submit" class="btn btn--base btn--sm w-100 checkout-btn"
+                            <div class="order-summary__button padding" id="checkout_div">
+                                <button class="btn btn--base btn--sm w-100 checkout-btn"
                                     @disabled(count($cartItems) == 0)>@lang('Checkout')</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </form>
         </div>
     </section>
     <x-confirmation-modal frontend="true" />
@@ -110,18 +107,24 @@
     </style>
 @endpush
 
+@push('script-lib')
+    
+@endpush
+
 @push('script')
     <script>
         "use strict";
+        // let cartLength = +Number($('.cart-button__qty').first().text());
+                        
+        // if (cartLength == 0) {
+        //     $('.checkout-btn').attr('disabled', true);
+        //     $('.empty-text').removeClass('d-none');
+        // }
         (function($) {
-            $.ajax({
-                type: 'GET',   
-                url: "{{route('cart.getCartList')}}",
-                success: function(response){
-                    console.log(response);
-                }
+            $(document).on('click', '.checkout-btn', function() {
+                $('#sendTxButton').trigger('click');
             });
-
+            
             $(document).on('change', '.extended', function() {
 
                 let extendedPrice = +"{{ @$general->twelve_month_extended_fee ?? 0 }}";

@@ -201,8 +201,8 @@ class OrderController extends Controller
 
         $notify[] = ['success', 'Order Completed Successfully'];
         $request->session()->flash('notify', $notify);
-        // return response('Success');
-        return redirect('/cart');
+        return response('Success');
+        // return redirect('/cart');
         // return to_route('user.order.list')->withNotify($notify);
     }
 

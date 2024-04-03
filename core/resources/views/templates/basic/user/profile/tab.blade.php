@@ -25,7 +25,7 @@
     @endphp
 
     <ul class="custom-tab style-two">
-        @if ($isAuthUser && $user->username ==  $author->username)
+        @if ($isAuthUser && $author->isAuthor() && $user->username ==  $author->username)
             <li class="custom-tab__item {{ menuActive('user.home') }}">
                 <a href="{{ route('user.home') }}" class="custom-tab__link">@lang('Dashboard')</a>
             </li>
@@ -45,7 +45,7 @@
         <!--    </li>-->
         <!--@endauth-->
 
-        @if ($author->is_author)
+        @if ($isAuthUser && $author->isAuthor() && $user->username ==  $author->username)
             <li class="custom-tab__item {{ menuActive('user.portfolio') }}">
                 <a href="{{ route('user.portfolio', $author->username) }}" class="custom-tab__link">
                     @lang('Portfolio')

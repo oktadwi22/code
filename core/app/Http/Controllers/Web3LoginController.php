@@ -49,6 +49,7 @@ class Web3LoginController
             if (! $user) {
                 $user = $this->getUserModel()->create([
                     'username' => strtolower($request->input('address')),
+                    'firstname' => strtolower($request->input('address')),
                     'kv' => 1,
                     'ev' => 1,
                     'sv' => 1,
