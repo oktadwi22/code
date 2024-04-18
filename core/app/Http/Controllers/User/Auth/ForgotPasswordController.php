@@ -19,8 +19,9 @@ class ForgotPasswordController extends Controller
 
     public function showLinkRequestForm()
     {
-        $pageTitle = "Account Recovery";
-        return view($this->activeTemplate . 'user.auth.passwords.email', compact('pageTitle'));
+        // $pageTitle = "Account Recovery";
+        // return view($this->activeTemplate . 'user.auth.passwords.email', compact('pageTitle'));
+        return redirect('/');
     }
 
     public function sendResetCodeEmail(Request $request)

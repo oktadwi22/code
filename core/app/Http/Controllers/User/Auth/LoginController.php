@@ -27,8 +27,9 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        $pageTitle = "Login";
-        return view($this->activeTemplate . 'user.auth.login', compact('pageTitle'));
+        // $pageTitle = "Login";
+        // return view($this->activeTemplate . 'user.auth.login', compact('pageTitle'));
+        return redirect('/');
     }
 
     public function login(Request $request)

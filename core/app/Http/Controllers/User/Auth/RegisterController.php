@@ -29,11 +29,12 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        $pageTitle = "Register";
-        $info = json_decode(json_encode(getIpInfo()), true);
-        $mobileCode = @implode(',', $info['code']);
-        $countries = json_decode(file_get_contents(resource_path('views/partials/country.json')));
-        return view($this->activeTemplate . 'user.auth.register', compact('pageTitle','mobileCode','countries'));
+        // $pageTitle = "Register";
+        // $info = json_decode(json_encode(getIpInfo()), true);
+        // $mobileCode = @implode(',', $info['code']);
+        // $countries = json_decode(file_get_contents(resource_path('views/partials/country.json')));
+        // return view($this->activeTemplate . 'user.auth.register', compact('pageTitle','mobileCode','countries'));
+        return redirect('/');
     }
 
 
