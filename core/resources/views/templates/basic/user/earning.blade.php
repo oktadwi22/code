@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                {{-- <div class="col-lg-4 col-sm-6">
                     <div class="dashboard-widget">
                         <span class="dashboard-widget__icon--big"><i class="fa fa-wallet"></i></span>
                         <h6 class="dashboard-widget__title">@lang('Balance')</h6>
@@ -80,7 +80,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
         <div class="col-12">

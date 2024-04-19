@@ -23,7 +23,7 @@
                                 <option value="-" @selected(request()->trx_type == '-')>@lang('Minus')</option>
                             </select>
                         </div>
-                        <div class="flex-grow-1">
+                        {{-- <div class="flex-grow-1">
                             <label class="form--label">@lang('Remark')</label>
                             <select class="form-select form--control form--control--sm" name="remark">
                                 <option value="">@lang('Any')</option>
@@ -32,7 +32,7 @@
                                         {{ __(keyToTitle($remark->remark)) }}</option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
                         <div class="flex-grow-1 align-self-end">
                             <button class="btn btn--base btn--sm w-100"><i
                                     class="las la-filter"></i>@lang('Filter')</button>
@@ -50,8 +50,8 @@
                                 <th>@lang('Trx')</th>
                                 <th>@lang('Transacted')</th>
                                 <th>@lang('Amount')</th>
-                                <th>@lang('Post Balance')</th>
-                                <th>@lang('Detail')</th>
+                                {{-- <th>@lang('Post Balance')</th> --}}
+                                {{-- <th>@lang('Detail')</th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -67,10 +67,10 @@
                                             {{ $general->cur_text }}
                                         </span>
                                     </td>
-                                    <td class="budget">
+                                    {{-- <td class="budget">
                                         {{ showAmount($trx->post_balance) }} {{ __($general->cur_text) }}
                                     </td>
-                                    <td>{{ __($trx->details) }}</td>
+                                    <td>{{ __($trx->details) }}</td> --}}
                                 </tr>
                             @empty
                                 <tr>
