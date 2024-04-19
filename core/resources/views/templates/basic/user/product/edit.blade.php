@@ -101,7 +101,7 @@
                                                 class="form-control form--control form--control--sm">
                                         </div>
                                     </div>
-                                    <span class="license-price-content__operator">+</span>
+                                    {{-- <span class="license-price-content__operator">+</span>
                                     <div class="license-price-content__price">
                                         <span class="license-price-content__title">@lang('Buyer Fee')</span>
                                         <span
@@ -112,7 +112,7 @@
                                         <span class="license-price-content__title">@lang('Total Price')</span>
                                         <span
                                             class="license-price-content__text text--base fw-semibold totalPrice">{{ $general->cur_sym }}{{ showAmount($general->personal_buyer_fee) }}</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <div class="license-price-content priceGroup" data-seller_fee="{{ getAmount($general->commercial_buyer_fee) }}">
                                     <span class="license-price-content__type fw-semibold">@lang('Commercial License')</span>
@@ -124,7 +124,7 @@
                                                 class="form-control form--control form--control--sm">
                                         </div>
                                     </div>
-                                    <span class="license-price-content__operator">+</span>
+                                    {{-- <span class="license-price-content__operator">+</span>
                                     <div class="license-price-content__price">
                                         <span class="license-price-content__title">@lang('Buyer Fee')</span>
                                         <span
@@ -135,7 +135,7 @@
                                         <span class="license-price-content__title">@lang('Total Price')</span>
                                         <span
                                             class="license-price-content__text text--base fw-semibold totalPrice">{{ $general->cur_sym }}{{ showAmount($general->commercial_buyer_fee) }}</span>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
