@@ -13,7 +13,7 @@
                             <p class="section-heading__desc">{{ __(@$cta->data_values->subtitle) }}</p>
                         </div>
                         <div >
-                            <a href="{{ route('user.register') }}" class="btn btn--base">@lang('Create Acccount')</a>
+                            {{-- <a href="{{ route('user.register') }}" class="btn btn--base">@lang('Create Acccount')</a> --}}
                         </div>
                     </div>
                 </div>

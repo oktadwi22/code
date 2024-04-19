@@ -61,22 +61,22 @@
                                 <a class="footer-menu__link" href="{{ route('user.home') }}">
                                     @lang('Dashboard')
                                 </a>
-                                @else
+                                {{-- @else
                                 <a class="footer-menu__link" href="{{ route('user.register') }}">
                                     @lang('Register')
-                                </a>    
+                                </a>     --}}
                                 @endauth
                             </li>
                             <li class="footer-menu__item">
-                                <a class="footer-menu__link" href="{{ route('contact') }}">
+                                <a class="footer-menu__link" href="https://sourceblock.gitbook.io/sourceblock/community-and-support/social-media-links">
                                     @lang('Contact')
                                 </a>
                             </li>
-                            <li class="footer-menu__item">
+                            {{-- <li class="footer-menu__item">
                                 <a class="footer-menu__link" href="/">
                                     Company Certificate
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>
@@ -84,15 +84,29 @@
                     <div class="footer-item">
                         <h6 class="footer-item__title">@lang('Policy Page')</h6>
                         <ul class="footer-menu">
-
-                            @foreach ($policyPages as $policy)
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link"
+                                    href="https://sourceblock.gitbook.io/sourceblock/faq/privacy-policy">Privacy Policy
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link"
+                                    href="https://sourceblock.gitbook.io/sourceblock/faq/terms-of-service">Terms of Service
+                                </a>
+                            </li>
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link"
+                                    href="https://sourceblock.gitbook.io/sourceblock/faq/disclaimer">Disclaimer
+                                </a>
+                            </li>
+                            {{-- @foreach ($policyPages as $policy)
                                 <li class="footer-menu__item">
                                     <a class="footer-menu__link"
                                         href="{{ route('policy.pages', [slug($policy->data_values->title), $policy->id]) }}">
                                         {{ __($policy->data_values->title) }} 
                                     </a>
                                 </li>
-                            @endforeach
+                            @endforeach --}}
                         </ul>
                     </div>
                 </div>
