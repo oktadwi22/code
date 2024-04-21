@@ -56,7 +56,7 @@ Route::controller('SiteController')->group(function () {
 // });
 
 Route::middleware('web')->as('web3')->prefix('_web3')->group(function () {
-    $routes = config('web3.routes', ['signature', 'link', 'login', 'register']);
+    $routes = ['signature', 'link', 'login', 'register', 'switchAccount'];
 
     if (in_array('signature', $routes)) {
         Route::get('signature', 'Web3LoginController@signature')->name('.signature');
@@ -72,6 +72,10 @@ Route::middleware('web')->as('web3')->prefix('_web3')->group(function () {
 
     if (in_array('register', $routes)) {
         Route::post('register', 'Web3LoginController@register')->name('.register');
+    }
+
+    if (in_array('switchAccount', $routes)) {
+        Route::post('switchAccount', 'Web3LoginController@switchAccount')->name('.switchAccount');
     }
 });
 

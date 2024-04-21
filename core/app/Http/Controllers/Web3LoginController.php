@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\ValidationException;
 
-class Web3LoginController
+class Web3LoginController extends Controller
 {
     public function signature(Request $request)
     {
@@ -34,6 +34,47 @@ class Web3LoginController
     public function register(Request $request)
     {
         // $this->checkSignature($request);
+        $request->validate([
+            'address' => ['required', 'string'],
+            'token' => ['required', 'string'],
+        ]);
+
+        if (hash('sha256', $request->address) == $request->token) {
+            // if (Web3Login::$retrieveUserCallback) {
+            //     $user = call_user_func(Web3Login::$retrieveUserCallback, strtolower($request->input('address')));
+            // } else {
+                $user = $this->getUserModel()->where('username', strtolower($request->input('address')))->first();
+            // }
+            
+            if (! $user) {
+                $user = $this->getUserModel()->create([
+                    'username' => strtolower($request->input('address')),
+                    'firstname' => strtolower($request->input('address')),
+                    'kv' => 1,
+                    'ev' => 1,
+                    'sv' => 1,
+                    'profile_complete' => 1,
+                    'is_author' => 1
+                ]);
+            }
+            
+            Auth::login($user);
+
+            return new Response($user, 200);
+        } else {
+            return response()->json([
+                "message" => "invalid token!"
+            ], 401);
+        }
+    }
+
+    public function switchAccount(Request $request)
+    {
+        //Logout
+        // $this->guard()->logout();
+        Auth::logout();
+        request()->session()->invalidate();
+
         $request->validate([
             'address' => ['required', 'string'],
             'token' => ['required', 'string'],
