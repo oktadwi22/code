@@ -6,7 +6,7 @@
 <div class="header-top">
     <div class="container">
         <div class="top-header__wrapper flex-between">
-            <a class="navbar-brand logo site-logo d-lg-block d-none" href="{{ route('home') }}">
+            <a class="navbar-brand logo site-logo d-lg-block d-none" href="https://www.sourceblock.software">
                 <img src="{{ siteLogo() }}" alt="@lang('logo')">
             </a>
             <div class="header-top__right flex-between gap-2">

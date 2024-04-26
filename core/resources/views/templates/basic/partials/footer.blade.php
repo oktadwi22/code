@@ -72,11 +72,11 @@
                                     @lang('Contact')
                                 </a>
                             </li>
-                            {{-- <li class="footer-menu__item">
-                                <a class="footer-menu__link" href="/">
+                            <li class="footer-menu__item">
+                                <a class="footer-menu__link" href="https://www.sourceblock.software/certificate">
                                     Company Certificate
                                 </a>
-                            </li> --}}
+                            </li>
                         </ul>
                     </div>
                 </div>
