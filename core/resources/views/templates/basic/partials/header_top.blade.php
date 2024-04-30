@@ -106,12 +106,12 @@
                                             @lang('Transactions')
                                         </a>
                                     </li>
-                                    <li class="profile-dropdown-list__item">
-                                        <a href="{{ route('ticket.index') }}" class="profile-dropdown-list__link {{menuActive('ticket.*')}}">
-                                            <span class="icon"><i class="la la-ticket"></i></span>
-                                            @lang('Support Ticket')
-                                        </a>
-                                    </li>
+                                    <!--<li class="profile-dropdown-list__item">-->
+                                    <!--    <a href="{{ route('ticket.index') }}" class="profile-dropdown-list__link {{menuActive('ticket.*')}}">-->
+                                    <!--        <span class="icon"><i class="la la-ticket"></i></span>-->
+                                    <!--        @lang('Support Ticket')-->
+                                    <!--    </a>-->
+                                    <!--</li>-->
                                       
                                     <li class="profile-dropdown-list__item">
                                         <a href="{{ route('user.author.favorites') }}" class="profile-dropdown-list__link {{menuActive('user.author.favorites')}}">
